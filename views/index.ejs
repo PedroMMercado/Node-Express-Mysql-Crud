@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <title><%= title %></title>
+    </head>
+        <body class="container">
+            <ul>
+                <% for(var i = 0 ; i < data.length; i++) {%>
+                <li>
+                    First Name: <%= data[i].firstname %> <br>
+                    Last Name : <%= data[i].lastname %> <br>
+                    Email: <%= data[i].email %> <br>
+                    <a href="/edit/<%= data[i].id %>" class="btn btn-default" role="button">Edit</a>
+                    <a href="/delete/<%= data[i].id %>" class="btn btn-danger" role="button">Delete</a>
+                </li>
+                <% } %>
+            </ul>
+
+            <form action="/" method="post">
+                First name:<br>
+                <input type="text" name="firstname" value="firstname"><br>
+                Last name:<br>
+                <input type="text" name="lastname" value="lastname"><br>
+                Email:<br>
+                <input type="text" name="email" value="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </body>
+
+
+</html>
+

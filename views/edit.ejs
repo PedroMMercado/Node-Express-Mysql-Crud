@@ -1,0 +1,11 @@
+Editing Person <%= data[0].id %>
+
+<form action="/edit/<%= data[0].id %>" method="post">
+  First name:<br>
+  <input type="text" name="firstname" value="<%= data[0].firstname %>"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="<%= data[0].lastname %>"><br>
+  Email:<br>
+  <input type="text" name="email" value="<%= data[0].email %>"><br>
+  <input type="submit" value="Submit">
+</form>
