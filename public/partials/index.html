@@ -1,2 +1,36 @@
-<h1>index partial page displaying</h1>
-<h1>Name is : {{ name }}</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="n in data">
+            <td>{{n.id}}</td>
+            <td>{{n.firstname}}</td>
+            <td>{{n.lastname}}</td>
+            <td>{{n.email}}</td>
+            <td><button type="submit" class="btn btn-default" ng-click="put(n.id)">Edit</button></td>
+            <td><button type="submit" class="btn btn-danger" ng-click="delete(n.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<form>
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" class="form-control" ng-model="formData.firstname">
+    </div>
+    <div class="form-group">
+        <label>Last Name: </label>
+        <input type="text" class="form-control" ng-model="formData.lastname">
+    </div>
+    <div class="form-group">
+        <label>Email: </label>
+        <input type="text" class="form-control" ng-model="formData.email">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="post()">Submit</button>
+</form>

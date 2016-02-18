@@ -37,9 +37,13 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-app.use('/', routes);
-app.use('/users', users);
+//app.use('/', routes);
+//app.use('/users', users);
 app.use('/rest', rest);
+
+app.get('*', function (req, res) {
+  res.sendFile('/public/index.html');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
