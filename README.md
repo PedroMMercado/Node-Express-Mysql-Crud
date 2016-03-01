@@ -9,4 +9,4 @@ create table person (
 
 You also have to edit the database.js to your settings.
 
-To run program open node command prompt and navigate to folder where you have the files saved and type npm install
+To run program open node command prompt and navigate to folder where you have the files saved and type npm start
