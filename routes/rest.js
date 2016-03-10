@@ -13,7 +13,7 @@ router.get('/', function (req,res) {
     });
 });
 
-// post
+// post original
 router.post('/',function(req,res){
     connection.query('insert into person (firstname,lastname,email) values (?,?,?)',[req.body.firstname,req.body.lastname,req.body.email], function(error,results,fields){
         if(error)
